@@ -1,0 +1,125 @@
+.main {
+	&__nav {
+		background-color: $color-black-1;
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 100%;
+		font-size: 1.8rem;
+		overflow: hidden;
+		transition: all ease-in-out 250ms;
+
+		&.open {
+			left: 0;
+		}
+
+		@media (min-width: 725px) {
+			position: relative;
+			flex: auto;
+			margin-left: 1rem;
+			left: 0;
+		}
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		height: 90vh;
+
+		@media (min-width: 725px) {
+			flex-direction: row;
+			height: auto;
+		}
+	}
+
+	&__item {
+		flex: 1 1 auto;
+		border-bottom: 1px solid $color-grey-light-2;
+		display: flex;
+
+		@media (min-width: 725px) {
+			display: inline-block;
+			border: none;
+			text-align: center;
+			margin-top: 2.6rem;
+		}
+	}
+
+	&__link {
+		color: $text-inverse;
+		text-decoration: none;
+		flex-basis: 100%;
+		@include flex-center;
+
+		@media (min-width: 725px) {
+			display: inline;
+			justify-content: flex-end;
+			padding: 0 0.5rem;
+			border-right: 0.2rem solid $color-grey-light-1;
+		}
+
+		&:hover,
+		&:focus {
+			background: darken($color: $color-grey-light-3, $amount: 20%);
+			border-color: darken($color: $color-grey-light-2, $amount: 20%);
+			font-size: 2rem;
+			font-weight: $font-bold;
+
+			@media (min-width: 725px) {
+				background-color: $color-black-1;
+				font-size: inherit;
+				border-right: 0.3rem solid $color-grey-light-1;
+			}
+		}
+	}
+}
+
+// hamburger menu
+
+.nav__toggle {
+	display: block;
+	background-color: $color-black-1;
+	padding: 1rem;
+	position: absolute;
+	right: 2rem;
+	top: 2rem;
+	cursor: pointer;
+	opacity: 100;
+
+	@media (min-width: 725px) {
+		display: none;
+	}
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+	content: '';
+	display: block;
+	width: 2rem;
+	height: 0.3rem;
+	background-color: $color-white;
+	transition: all ease-in-out 350ms;
+}
+
+.hamburger::before {
+	transform: translateY(-0.6rem);
+}
+
+.hamburger::after {
+	transform: translateY(0.3rem);
+}
+
+// display the x in hamburger menu
+.hamburger.open {
+	transform: rotate(45deg);
+
+	&::after {
+		transform: rotate(-90deg) translateX(3px);
+	}
+
+	&::before {
+		opacity: 0;
+	}
+}

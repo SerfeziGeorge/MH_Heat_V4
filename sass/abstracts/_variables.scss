@@ -1,0 +1,48 @@
+// COLORS
+$color-primary-green: #6effc9;
+$color-primary-blue: #0099cc;
+$color-primary-pink: #b41869;
+$color-primary-yellow: hsl(36, 91%, 64%);
+
+$color-background-light: #f7f7f7;
+$color-background-dark: #afa7ab54;
+
+$color-tertiary-light: #2998ff;
+$color-tertiary-dark: #11101abe;
+
+$color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #eee;
+$color-grey-light-3: #78909c;
+$color-grey-light-4: rgb(196, 194, 194);
+
+$color-white: #fff;
+$color-black: #313131;
+$color-black-1: #393e46;
+
+// CARD COLORS
+$card-color-red: #f84848;
+$card-color-orange: #ff5521;
+$card-color-black: #444;
+$card-color-blue: #2175f5;
+
+// Text colors
+
+$text-main: $color-black;
+$text-inverse: $color-white;
+$text-accent: $color-primary-pink;
+$text-secondary: $color-tertiary-dark;
+
+// FONT
+$default-font-size: 1.6rem;
+
+// Font weights
+
+$font-light: 300;
+$font-normal: 400;
+$font-bold: 700;
+$font-black: 900;
+
+// GRID
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-horizontal: 6rem;

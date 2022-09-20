@@ -1,0 +1,46 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	// This defines what 1rem is; here the 1rem = 10px; .625*16=10px
+	font-size: 62.5%;
+}
+
+body {
+	box-sizing: border-box;
+	background-color: $color-grey-light-1;
+	color: $text-main;
+	text-align: center;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.container {
+	width: 90%;
+	max-width: 100rem;
+	margin: 0 auto;
+}
+
+.unstyle__list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.base_spacing {
+	color: $text-main;
+	//padding-top: 12rem;
+	//padding-bottom: 3.8rem;
+	margin-top: 3.5rem;
+	&:last-of-type {
+		margin-bottom: 4.5rem;
+	}
+}

@@ -1,0 +1,72 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0 0 0.75rem;
+}
+
+h1:last-child,
+h2:last-child,
+h3:last-child,
+h4:last-child,
+h5:last-child,
+h6:last-child,
+p:last-child {
+	margin: 0;
+}
+
+h1 {
+	font-size: 2rem;
+	font-weight: $font-light;
+	line-height: 1.15;
+	text-transform: uppercase;
+	letter-spacing: 0.3rem;
+	text-align: center;
+}
+
+h2 {
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+	line-height: 1;
+}
+
+.title__large {
+	font-size: 2.3rem;
+	font-weight: $font-black;
+	line-height: 0.9;
+
+	span {
+		font-weight: $font-normal;
+	}
+}
+
+
+
+.text__read {
+	font-size: 1.6rem;
+	line-height: 1.6;
+}
+.text__intro {
+	font-size: 1.2rem;
+	line-height: 1.6;
+}
+
+.title__footer {
+	text-transform: uppercase;
+	letter-spacing: 0.3rem;
+	line-height: 1;
+
+	&::before,
+	&::after {
+		content: '';
+		display: block;
+		height: 0.1rem;
+		background: $text-inverse;
+		opacity: 0.25;
+		margin: 0.75rem 0;
+	}
+}

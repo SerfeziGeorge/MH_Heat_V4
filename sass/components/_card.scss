@@ -1,0 +1,361 @@
+.card {
+	margin-bottom: 3.5rem;
+	perspective: 150rem;
+	-moz-perspective: 150rem;
+	position: relative;
+	height: 50rem;
+	transform-style: preserve-3d;
+	transform: rotatey(0deg) translatex(0px) translatey(0px);
+	transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
+	border-radius: 0.8rem;
+	cursor: pointer;
+
+	&__side {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 50rem;
+		backface-visibility: hidden;
+		height: 50rem;
+
+		&--front {
+			transform: rotateY(0deg);
+			z-index: 10;
+		}
+
+		&--back {
+			transform: rotateY(-180deg);
+			z-index: 10;
+		}
+	}
+
+	&.flip {
+		transform: translateY(-0.5rem) rotateY(180deg);
+		z-index: 20;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	// FRONT SIDE STYLING
+	&__player {
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-color: $color-grey-light-2;
+		height: 18rem;
+		width: 100%;
+		margin: 0 auto 3rem auto;
+
+		&--1 {
+			background-image: url(../../img/roster/adebayo-grey-bck.png);
+		}
+		&--2 {
+			background-image: url(../../img/roster/Butler-grey.png);
+		}
+		&--3 {
+			background-image: url(../../img/roster/Herro-grey.png);
+		}
+		&--4 {
+			background-image: url(../../img/roster/crowder.png);
+		}
+		&--5 {
+			background-image: url(../../img/roster/Dragic.png);
+		}
+		&--6 {
+			background-image: url(../../img/roster/Nunn.png);
+		}
+		&--7 {
+			background-image: url(../../img/roster/Iguodala.png);
+		}
+		&--8 {
+			background-image: url(../../img/roster/Dunca-Robinson.png);
+		}
+		&--9 {
+			background-image: url(../../img/roster/Derrick-Jones.png);
+		}
+	}
+
+	&__details {
+		padding: 3rem;
+	}
+
+	&__item {
+		text-align: center;
+		font-size: 1.5rem;
+		padding: 1rem;
+
+		&:not(:last-child) {
+			border-bottom: 0.1rem solid $color-grey-light-2;
+		}
+	}
+
+	@media (min-width: 725px) {
+		&:first-of-type {
+			margin-top: 0rem;
+		}
+	}
+
+	&__product {
+		background-size: contain;
+		background-position: right;
+		background-repeat: no-repeat;
+		height: 18.9rem;
+		margin: 0 auto 3rem auto;
+		&--1 {
+			background-image: url(../../img/products/Jersey-Blue3.webp);
+		}
+		&--2 {
+			background-image: url(../../img/products/Jersey-Black2.webp);
+		}
+		&--3 {
+			background-image: url(../../img/products/Jersey-Red3.webp);
+		}
+		&--4 {
+			background-image: url(../../img/products/Wade-White.webp);
+		}
+		&--5 {
+			background-image: url(../../img/products/ADEBAYO-Redwebp.webp);
+		}
+		&--6 {
+			background-image: url(../../img/products/Jersey-Bluewebp.webp);
+		}
+		&--7 {
+			background-image: url(../../img/products/Wade-Black.webp);
+		}
+		&--8 {
+			background-image: url(../../img/products/Jersey-Red2.webp);
+		}
+		&--9 {
+			background-image: url(../../img/products/Nunn-White.webp);
+		}
+		&--10 {
+			background-image: url(../../img/products/Wade-Blue.webp);
+		}
+		&--11 {
+			background-image: url(../../img/products/Adebayo-White.webp);
+		}
+		&--12 {
+			background-image: url(../../img/products/dragic_swingman-black.webp);
+		}
+
+		&--background {
+			background-position: center;
+			height: 19rem;
+			max-width: 28.5rem;
+			position: relative;
+			transition: 0.5s;
+			background-color: lighten($color: $color-black-1, $amount: 25);
+
+			.share-icon-color {
+				&--blue {
+					background-color: $color-white;
+					color: $card-color-blue;
+				}
+				&--orange {
+					background-color: $color-white;
+					color: $card-color-orange;
+				}
+				&--red {
+					background-color: $color-white;
+					color: $card-color-red;
+				}
+				&--black {
+					background-color: $color-white;
+					color: $card-color-black;
+				}
+			}
+
+			.nike-logo {
+				position: absolute;
+				width: 5rem;
+				top: 1rem;
+				left: 1rem;
+				z-index: 10;
+			}
+
+			.share {
+				display: inline;
+				width: 3.5rem;
+				height: 3.5rem;
+				top: 0.5rem;
+				right: 0.8rem;
+				position: absolute;
+				z-index: 10;
+				border-radius: 50%;
+				text-align: center;
+				text-decoration: none;
+				transition: 0.5s;
+			}
+
+			.share i {
+				font-size: 1.2rem;
+				line-height: 3.5rem;
+			}
+
+			.share:hover {
+				transform: scale(1.1);
+			}
+
+			.MH {
+				position: absolute;
+				top: 33%;
+				left: 3%;
+				font-size: 8rem;
+				font-weight: $font-black;
+				text-transform: uppercase;
+				line-height: 0.9;
+				color: $color-white;
+				opacity: 0.1;
+				z-index: 10;
+			}
+		}
+		&--info {
+			z-index: 1;
+
+			.new-card-color {
+				&--blue {
+					background-color: $card-color-blue;
+					color: $color-white;
+				}
+				&--orange {
+					background-color: $card-color-orange;
+					color: $color-white;
+				}
+				&--red {
+					background-color: $card-color-red;
+					color: $color-white;
+				}
+				&--black {
+					background-color: $card-color-black;
+					color: $color-white;
+				}
+			}
+			.card-color {
+				&--blue {
+					background-color: $card-color-blue;
+					color: $color-black;
+				}
+
+				&--orange {
+					background-color: $card-color-orange;
+					color: $color-black;
+				}
+				&--red {
+					background-color: $card-color-red;
+					color: $color-black;
+				}
+				&--black {
+					background-color: $card-color-black;
+					color: $color-black;
+				}
+			}
+			.product-name {
+				padding: 0 0 2rem 0;
+			}
+
+			.product-flex {
+				@include flex-center;
+				@include border-bottom;
+				padding: 1rem 0;
+			}
+			.new {
+				text-transform: uppercase;
+				padding: 0.3rem 1rem;
+				border-radius: 0.5rem;
+				transition: 0.5s;
+				margin-top: -1rem;
+				margin-left: 0.5rem;
+			}
+
+			.product-name div .new {
+				text-transform: uppercase;
+				padding: 0.3rem 1rem;
+				border-radius: 0.5rem;
+				transition: 0.5s;
+			}
+
+			.product-description {
+				margin: 1rem 0;
+				@include border-bottom;
+				padding: 1rem 0;
+			}
+
+			.color-container {
+				padding: 1rem 0;
+				@include border-bottom;
+			}
+
+			.colors {
+				@include flex-center;
+				@include border-bottom;
+				padding: 1rem 0;
+			}
+			.color {
+				width: 2.5rem;
+				height: 2.5rem;
+				border-radius: 50%;
+				margin: 0 1.5rem;
+				border: 5px solid;
+				cursor: pointer;
+				transition: 0.5s;
+			}
+
+			.product-size-container {
+				padding: 1rem 0;
+				margin-bottom: 0.2rem;
+			}
+			.sizes {
+				padding: 1rem 0;
+				@include flex-center;
+				@include border-bottom;
+			}
+
+			.size {
+				width: 4rem;
+				height: 4rem;
+				border-radius: 0.6rem;
+				background-color: $color-grey-light-1;
+				margin: 0 0.5rem;
+				text-align: center;
+				line-height: 4rem;
+				font-size: 1.2rem;
+				font-weight: $font-bold;
+				cursor: pointer;
+				transition: 0.3s;
+			}
+			.size.active {
+				background-color: $card-color-black;
+				color: $color-white;
+				transition: 0.5s;
+			}
+
+			.product-buy-price {
+				padding: 0;
+				@include flex-center;
+				justify-content: space-evenly;
+			}
+
+			.price {
+				margin-top: -1.5rem;
+				color: #333;
+				display: flex;
+				align-items: flex-start;
+				font-weight: $font-black;
+				font-size: 1.5rem;
+
+				span {
+					font-weight: $font-bold;
+					margin-top: 0.1rem;
+				}
+			}
+		}
+	}
+
+	@media (min-width: 425px) {
+		max-width: 30rem;
+	}
+}
